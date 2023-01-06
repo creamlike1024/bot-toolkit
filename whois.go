@@ -107,6 +107,6 @@ func Whois(whoisQuery *WhoisQuery) (string, error) {
 		"Admin: "+respBody.Admin.Name,
 		"Tech: "+respBody.Tech.Name,
 		"Billing: "+respBody.Billing.Name,
-		"Nameservers: "+StringSliceToText(respBody.Nameservers))
+		"Nameservers: \n"+StringSliceToText(respBody.Nameservers))
 	return result, nil
 }
