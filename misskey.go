@@ -159,7 +159,7 @@ func GetMisskeyInstanceInfo(host string) string {
 
 	info := MergeText(
 		"Misskey 实例服务器信息：",
-		"机器名："+bodyMapInfo.Machine,
+		"主机名／容器名："+bodyMapInfo.Machine,
 		"CPU: "+bodyMapInfo.CPU.Model,
 		"核心数："+strconv.Itoa(bodyMapInfo.CPU.Cores),
 		"内存："+strconv.FormatInt(bodyMapInfo.Mem.Total/1024/1024, 10)+"MB",
@@ -180,8 +180,8 @@ func GetMisskeyInstanceInfo(host string) string {
 		"描述："+bodyMapMeta.Description,
 		"URI: "+bodyMapMeta.URI,
 		"版本："+bodyMapMeta.Version,
-		"管理员："+bodyMapMeta.MaintainerName,
-		"管理员联系方式："+bodyMapMeta.MaintainerEmail,
+		"管理员： "+bodyMapMeta.MaintainerName,
+		"管理员联系方式： "+bodyMapMeta.MaintainerEmail,
 		"反馈 URL："+bodyMapMeta.FeedbackURL,
 		"用户协议："+bodyMapMeta.TosURL,
 		"源码地址："+bodyMapMeta.RepositoryURL,
